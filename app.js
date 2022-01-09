@@ -14,6 +14,17 @@ function mouseLeave(){
     title.innerText = "Mouse is OUT";
 }
 
+function handleWindowResize(){
+    document.body.style.backgroundColor = "tomato";
+}
+
+function handleWindowCopy(){
+    alert("Copy!");
+}
+
 title.addEventListener("click", clickFunction);
 title.addEventListener("mouseenter", mouseEnter);
 title.addEventListener("mouseleave", mouseLeave);
+
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleWindowCopy);
