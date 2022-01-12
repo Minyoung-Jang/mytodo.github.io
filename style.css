@@ -1,3 +1,16 @@
 body {
     background-color: aquamarine ;
 }
+
+h1 {
+    color: #0000ff;
+    transition: .5s ease-in-out;
+}
+
+.active{
+    color: tomato;
+}
+
+.hello{
+    font-family: 'Courier New', Courier, monospace;
+}
