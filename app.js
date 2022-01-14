@@ -1,20 +1,14 @@
 
-const h1 = document.querySelector("div.hello:first-child h1");
-
-function handleMouseEnter(){
-    h1.innerHTML = "The mouse is enter!";
-}
-
-function handleMouseGone(){
-    h1.innerHTML = "The mouse is gone!";
-}
-
 function handleWindowResize(){
-    h1.innerHTML = "You just resized!";
+    console.log(window.innerWidth);
+    if(window.innerWidth < 300){
+        document.body.style.backgroundColor = "blue";
+    }else if(window.innerWidth < 600){
+        document.body.style.backgroundColor = "tomato";
+    }else{
+        document.body.style.backgroundColor = "red";
+
+    }
 }
-
-h1.addEventListener("mouseenter", handleMouseEnter);
-h1.addEventListener("mouseleave", handleMouseGone);
-
 
 window.addEventListener("resize", handleWindowResize);
