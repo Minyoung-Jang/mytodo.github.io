@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>First Web</title>
+    <link rel="stylesheet" href="src/style.css">
+    <title>MY TODO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="hello">
-        <h1>
-            Hello!
-        </h1>
+    <div class="center">
+        <div class="row">
+            <img src="" id="weather-icon">
+            <div id="info"></div>
+        </div>
+        <div id="today"></div>
+        <div id="clock"></div>
+        <div class="hidden" id="greeting"></div>
+        <form class="hidden" id="login-form">
+            <input id="login-input" type="text" , placeholder="Write Your Name 😊">
+        </form>
+        <form id="todo-form">
+            <input class="todo-input"  type="text" , placeholder="Write Your Todo 🙌🏻">
+        </form>
+        <ul id="todo-list"></ul>
     </div>
-    <script src="app.js"></script>
+    <script src="src/login.js"></script>
+    <script src="src/background.js"></script>
+    <script src="src/todo.js"></script>
+    <script src="src/clock.js"></script>
+    <script src="src/weather.js"></script>
 </body>
+
 </html>

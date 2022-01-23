@@ -1,6 +1,7 @@
 
 const API_KEY = "e7ed762c3cdc4d0ac2fe23e8997ed418";
 const weatherIcon = document.querySelector("#weather-icon");
+const info = document.querySelector("#info");
 
 function onGeoSuccess(position) {
     const lat = position.coords.latitude;
@@ -14,7 +15,9 @@ function onGeoSuccess(position) {
                 console.dir(weatherIcon);
                 weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
                 const name = data.name;
-                console.log(data.name, data.weather[0].main);
+                const temp = data.main['temp'];
+
+                info.innerHTML = ` ${temp}℃ ${name}`;
             });
 }
 
